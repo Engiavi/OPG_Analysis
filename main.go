@@ -58,11 +58,7 @@ func main() {
 	}
 
 	slices.DeleteFunc(stocks, func(s Stock) bool {
-		if math.Abs(s.Gap)	> .1{
-			return true
-		}else{
-			return false
-		}
+		return math.Abs(s.Gap)	< .1
 	})
 
 }
